@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">UMS</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ums">UMS</string>
+    <string name="tariflar">TARIFLAR</string>
+    <string name="daqiqalar">Daqiqalar</string>
+    <string name="internet">Internet</string>
+    <string name="xizmatlar">Xizmatlar</string>
+    <string name="sms">SMS</string>
+    <string name="yangiliklar">Yangiliklar</string>
+
+
+</resources>

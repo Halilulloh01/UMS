@@ -1,0 +1,91 @@
+package com.example.ums
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import androidx.navigation.Navigation
+import com.example.ums.Models.listClass
+import com.example.ums.Utils.Data.list0
+import com.example.ums.Utils.Data.list1
+import com.example.ums.Utils.Data.list2
+import com.example.ums.Utils.Data.list3
+import com.example.ums.Utils.Data.list4
+import com.example.ums.Utils.Data.list5
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        supportActionBar?.hide()
+
+        load()
+
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        return Navigation.findNavController(this,R.id.myHost).navigateUp()
+    }
+
+    private fun load() {
+
+        list0 = ArrayList()
+        list1 = ArrayList()
+        list2 = ArrayList()
+        list3 = ArrayList()
+        list4 = ArrayList()
+        list5 = ArrayList()
+
+        list0.add(listClass("«60 daqiqa»",    "To'plamga kiritilgan daqiqalar 60 daqiqa",         "*171*103*60*1*010300230#",    "To'plamga kiritilgan daqiqalar 60 daqiqa",))
+        list0.add(listClass("«120 daqiqa»",   "To'plamga kiritilgan daqiqalar 120 daqiqa",        "*171*103*120*1*010300230#",   "To'plamga kiritilgan daqiqalar 120 daqiqa"))
+        list0.add(listClass("«180 daqiqa»",   "To'plamga kiritilgan daqiqalar 180 daqiqa",        "*171*103*180*1*010300230#",   "To'plamga kiritilgan daqiqalar 180 daqiqa"))
+        list0.add(listClass("«300 daqiqa»",   "To'plamga kiritilgan daqiqalar 300 daqiqa",        "*171*103*300*1*010300230#",   "To'plamga kiritilgan daqiqalar 300 daqiqa"))
+        list0.add(listClass("«900 daqiqa»",   "To'plamga kiritilgan daqiqalar 900 daqiqa",        "*171*103*900*1*010300230#",   "To'plamga kiritilgan daqiqalar 900 daqiqa"))
+        list0.add(listClass("«1200 daqiqa»",  "To'plamga kiritilgan daqiqalar 1200 daqiqa",       "*171*103*1200*1*010300230#",  "To'plamga kiritilgan daqiqalar 1200 daqiqa"))
+        list0.add(listClass("«1800 daqiqa»",  "To'plamga kiritilgan daqiqalar 1800 daqiqa",       "*171*103*1800*1*010300230#",  "To'plamga kiritilgan daqiqalar 1800 daqiqa"))
+
+        list1.add(listClass( "300 Mb",        "To'plamga kiritilgan megabaytlar 300 MB" ,         "*171*019*1*010300230#",       "To'plamga kiritilgan megabaytlar 300 MB"))
+        list1.add(listClass( "500 Mb",        "To'plamga kiritilgan megabaytlar 500 MB" ,         "*171*019*7*010300230#",       "To'plamga kiritilgan megabaytlar 500 MB"))
+        list1.add(listClass( "1000 Mb",       "To'plamga kiritilgan megabaytlar 1000 MB" ,        "*171*019*2*010300230#",       "To'plamga kiritilgan megabaytlar 1000 MB"))
+        list1.add(listClass( "2000 Mb",       "To'plamga kiritilgan megabaytlar 2000 MB" ,        "*171*019*1*010300230#",       "To'plamga kiritilgan megabaytlar 2000 MB"))
+        list1.add(listClass( "3000 Mb",       "To'plamga kiritilgan megabaytlar 3000 MB" ,        "*171*019*1*010300230#",       "To'plamga kiritilgan megabaytlar 3000 MB"))
+        list1.add(listClass( "5000 Mb",       "To'plamga kiritilgan megabaytlar 5000 MB" ,        "*171*019*1*010300230#",       "To'plamga kiritilgan megabaytlar 5000 MB"))
+        list1.add(listClass( "10000 Mb",      "To'plamga kiritilgan megabaytlar 1000 MB" ,        "*171*019*1*010300230#",       "To'plamga kiritilgan megabaytlar 1000 MB"))
+        list1.add(listClass( "20000 Mb",      "To'plamga kiritilgan megabaytlar 2000 MB" ,        "*171*019*1*010300230#",       "To'plamga kiritilgan megabaytlar 2000 MB"))
+        list1.add(listClass( "30000 Mb",      "To'plamga kiritilgan megabaytlar 3000 MB" ,        "*171*019*1*010300230#",       "To'plamga kiritilgan megabaytlar 3000 MB"))
+        list1.add(listClass( "50000 Mb",      "To'plamga kiritilgan megabaytlar 5000 MB" ,        "*171*019*1*010300230#",       "To'plamga kiritilgan megabaytlar 5000 MB"))
+
+        list2.add(listClass("SMS 100",        "To'plamga kiritilgan sms 100",                     "*171*018*1*010300230#",       "To'plamga kiritilgan sms 100"))
+        list2.add(listClass("SMS 300",        "To'plamga kiritilgan sms 100",                     "*171*018*2*010300230#",       "To'plamga kiritilgan sms 100"))
+        list2.add(listClass("SMS ONNET",      "To'plamga kiritilgan sms 50",                      "*171*204*50*010300230#",      "To'plamga kiritilgan sms 50"))
+
+        list3.add(listClass("Yorqin",         "60 000 so'm/oy",      "*111*113#",           "O'zbekiston bo'yicha qo'ng'iroqlarning bir daqiqasi\t\n126,31 so‘m\n\nUMS abonentlariga (1000 daqiqalik limit yakunlangandan keyin)\t\n126,31 so'm\n\nO'zbekistonning boshqa mobil operatorlari abonentlariga (1000 daqiqalik limit yakunlangandan keyin)\t\n126,31 so‘m\n\nShahar raqamlariga (1000 daqiqalik limit yakunlangandan keyin)\nO'zbekiston bo'yicha 1 ta SMS-xabar\t\n0,00\n\nKiruvchi SMS-xabar\t\n84,2 so‘m\n\nChiquvchi SMS-xabarlar – UMS abonentlariga (1000 SMS limit yakunlangandan keyin)\t\n84,2 so‘m\n\nChiquvchi SMS-xabarlar – O'zbekistonning boshqa mobil operatorlari abonentlarga (1000 SMS limit yakunlangandan keyin)\t\n631,5 so‘m\n\nChiquvchi SMS-xabarlar – O'zbekistonning boshqa mobil operatorlari abonentlarga (1000 SMS limit yakunlangandan keyin)\nInternetning 1 MB trafigi\t\n421 so‘m\n\n1 MB Internet-trafik uchun (10000 MB yakunlangandan keyin)"))
+        list3.add(listClass("Chilla Lite",    "20 000 so‘m/oy",      "*111*042#",           "O'zbekiston bo'yicha qo'ng'iroqlarning bir daqiqasi\t\n84,2 so‘m\n\nO'zbekistonning boshqa mobil operatorlari abonentlariga (3 000 daqiqalik to‘plamdan oshganda)\t\n84,2 so‘m\n\nShahar tarmog‘i raqamlariga (3 000 daqiqalik to‘plamdan oshganda)\nO'zbekiston bo'yicha 1 ta SMS-xabar\t\n0 so‘m\n\nKiruvchi SMS-xabar\t\n84,2 so‘m\n\nUMS tarmog‘idagi abonentlarga chiquvchi SMS-xabar (to‘plamda berilgan 100ta SMSdan oshganda)\t\n84,2 so‘m\n\nBoshqa mobil aloqa operatorlari tarmog‘idagi abonentlarga chiquvchi SMS-xabar (to‘plamda berilgan 100ta SMSdan oshganda)\t\n631,5 so‘m\n\nInternetning 1 MB trafigi\t\n421,04 so‘m\n1 Mb internet-trafik (to‘plamdagi 200 Megabaytdan oshganda)"))
+        list3.add(listClass("Asosiy",         "21 000 so‘m/oy",      "*111*114#",           "O'zbekiston bo'yicha qo'ng'iroqlarning bir daqiqasi\t\n126,31 so‘m\n\nUMS abonentlariga (500 daqiqalik limit yakunlangandan keyin)\t\n126,31 so‘m\n\nO'zbekistonning boshqa mobil operatorlari abonentlariga (500 daqiqalik limit yakunlangandan keyin)\t\n126,31 so‘m\n\nShahar raqamlariga (500 daqiqalik limit yakunlangandan keyin)\nO'zbekiston bo'yicha 1 ta SMS-xabar\t\n0 so‘m\n\nKiruvchi SMS-xabar\t\n84,2 so‘m\n\nChiquvchi SMS-xabarlar – UMS abonentlariga\t\n84,2 so‘m\n\nChiquvchi SMS-xabarlar – O'zbekistonning boshqa mobil operatorlari abonentlarga\t\n631,5 so‘m\n\nInternetning 1 MB trafigi\t\n421,04 so‘m\n1 MB Internet-trafik uchun (500 MB yakunlangandan keyin)"))
+        list3.add(listClass("Standart",       "25 000 so‘m/oy",      "*111*117#",           "O'zbekiston bo'yicha qo'ng'iroqlarning bir daqiqasi\t\n126,31 so‘m\n\nUMS abonentlariga (700 daqiqalik limit yakunlangandan keyin)\t\n126,31 so‘m\n\nO'zbekistonning boshqa mobil operatorlari abonentlariga (700 daqiqalik limit yakunlangandan keyin)\t\n126,31 so‘m\n\nShahar raqamlariga (700 daqiqalik limit yakunlangandan keyin)\nO'zbekiston bo'yicha 1 ta SMS-xabar\t\n0 so‘m\n\nKiruvchi SMS-xabar\t\n84,2 so‘m\n\nChiquvchi SMS-xabarlar – UMS abonentlariga (700 SMS limit yakunlangandan keyin)\t\n84,2 so‘m\n\nChiquvchi SMS-xabarlar – O'zbekistonning boshqa mobil operatorlari abonentlarga (700 SMS limit yakunlangandan keyin)\t\n631,5 so‘m\n\nInternetning 1 MB trafigi\t\n421,04 so‘m\n1 MB Internet-trafik uchun (1000 MB yakunlangandan keyin)"))
+        list3.add(listClass("Optimal+",       "33 000 so‘m/oy",      "*111*119*010300230#", "O'zbekiston bo'yicha qo'ng'iroqlarning bir daqiqasi\t\n126,31 so‘m\n\nUMS abonentlariga (800 daqiqalik limit yakunlangandan keyin)\t\n126,31 so‘m\n\nO'zbekistonning boshqa mobil operatorlari abonentlariga (400 daqiqalik limit yakunlangandan keyin)\t\n126,31 so‘m\n\nShahar raqamlariga (800 daqiqalik limit yakunlangandan keyin)\nO'zbekiston bo'yicha 1 ta SMS-xabar\t\n0 so‘m\n\nKiruvchi SMS-xabar\t\n84,2 so‘m\n\nChiquvchi SMS-xabarlar – UMS abonentlariga (400 SMS lik limit yakunlangandan keyin)\t\n84,2 so‘m\n\nChiquvchi SMS-xabarlar – O'zbekistonning boshqa mobil operatorlari abonentlarga (400 SMS lik limit yakunlangandan keyin)\t\n631,5 so‘m\n\nInternetning 1 MB trafigi\t\n421,04 so‘m\n1 MB Internet-trafik uchun (3000 MB yakunlangandan keyin)"))
+        list3.add(listClass("Qulay+",         "42 000 so‘m/oy",      "*111*124*010300230#", "O'zbekiston bo'yicha qo'ng'iroqlarning bir daqiqasi\t\n126,31so‘m\n\nUMS abonentlariga (1000 daqiqalik limit yakunlangandan keyin)\t\n126,31so‘m\n\nO'zbekistonning boshqa mobil operatorlari abonentlariga (1000 daqiqalik limit yakunlangandan keyin)\t\n126,31so‘m\n\nShahar raqamlariga (1000 daqiqalik limit yakunlangandan keyin)\nO'zbekiston bo'yicha 1 ta SMS-xabar\t\n0 so‘m\n\nKiruvchi SMS-xabar\t\n84,2 so‘m\n\nChiquvchi SMS-xabarlar – UMS abonentlariga (500 ta SMS limiti yakunlangandan keyin)\t\n84,2 so‘m\n\nChiquvchi SMS-xabarlar – O'zbekistonning boshqa mobil operatorlari abonentlarga (500 ta SMS limiti yakunlangandan keyin)\t\n631,5 so‘m\n\nInternetning 1 MB trafigi\t\n421,04 so‘m\n1 MB Internet-trafik uchun (5000 MB yakunlangandan keyin)"))
+        list3.add(listClass("Premial",        "63 000 so‘m/oy",      "*111*130*010300230#", "O'zbekiston bo'yicha qo'ng'iroqlarning bir daqiqasi\t\n0 so‘m\n\nUMS abonentlariga (1500 daqiqalik limit yakunlangandan keyin)\t\n84,2 so‘m\n\nO'zbekistonning boshqa mobil operatorlari abonentlariga (1500 daqiqalik limit yakunlangandan keyin)\t\n84,2 so‘m\n\nShahar raqamlariga (1500 daqiqalik limit yakunlangandan keyin)O'zbekiston bo'yicha 1 ta SMS-xabar\t\n0 so‘m\n\nKiruvchi SMS-xabar\t\n84,2 so‘m\n\nChiquvchi SMS-xabarlar – UMS abonentlariga (1500 SMS limit yakunlangandan keyin)\t\n84,2 so‘m\n\nChiquvchi SMS-xabarlar – O'zbekistonning boshqa mobil operatorlari abonentlarga (1500 SMS limit yakunlangandan keyin)\t\n631,5 so‘m\n\nInternetning 1 MB trafigi\t\n421,04 so‘m\n1 MB Internet-trafik uchun (7000 MB yakunlangandan keyin)"))
+        list3.add(listClass("Ideal",          "105 000 so‘m/oy",     "*111*135#",           "O'zbekiston bo'yicha qo'ng'iroqlarning bir daqiqasi\t\n0 so‘m\n\nUMS abonentlariga (3000 daqiqalik limitdan ketmaydi)\t\n84,2 so‘m\n\nO'zbekistonning boshqa mobil operatorlari abonentlariga (3000 daqiqalik limit yakunlangandan keyin)\t\n84,2 so‘m\n\nShahar raqamlariga (3000 daqiqalik limit yakunlangandan keyin)\nO'zbekiston bo'yicha 1 ta SMS-xabar\t\n0 so‘m\n\nKiruvchi SMS-xabar\t\n84,2 so‘m\n\nChiquvchi SMS-xabarlar – UMS abonentlariga (3000 SMS limit yakunlangandan keyin)\t\n84,2 so‘m\n\nChiquvchi SMS-xabarlar – O'zbekistonning boshqa mobil operatorlari abonentlarga (3000 SMS limit yakunlangandan keyin)\t\n631,5 so‘m\n\nInternetning 1 MB trafigi\t\n421,04 so‘m\n1 MB Internet-trafik uchun (14000 MB yakunlangandan keyin)"))
+        list3.add(listClass("VIP",            "147 000 so‘m/oy",     "*111*141#",           "O'zbekiston bo'yicha qo'ng'iroqlarning bir daqiqasi\t\n0 so‘m\n\nUMS abonentlariga\t\n0 so‘m\n\nO'zbekistonning boshqa mobil operatorlari abonentlariga\t\n0 so‘m\n\nShahar raqamlariga\nO'zbekiston bo'yicha 1 ta SMS-xabar\t\n0 so‘m\n\nKiruvchi SMS-xabar\t\n84,2 so‘m\n\nChiquvchi SMS-xabarlar – UMS abonentlariga (5000 SMS limit yakunlangandan keyin)\t\n84,2 so‘m\n\nChiquvchi SMS-xabarlar – O'zbekistonning boshqa mobil operatorlari abonentlarga (5000 SMS limit yakunlangandan keyin)\t\n631,5 so‘m\n\nInternetning 1 MB trafigi\t\n421,04 so‘m\n1 MB Internet-trafik uchun (30000 MB yakunlangandan keyin)"))
+        list3.add(listClass("Ajoyib",         "1668.42 so'm/kuniga", "*111*040#",           "O'zbekiston bo'yicha qo'ng'iroqlarning bir daqiqasi\t\n0 so'm\n\nKiruvchi qo‘ng‘iroqlar\t\n63,16 so'm\n\nUMS abonentlariga\t\n84,21 so'm\n\nO'zbekistonning boshqa mobil operatorlari abonentlariga\t\n84,21 so'm\n\nShahar raqamlariga\nO'zbekiston bo'yicha 1 ta SMS-xabar\t\n0 so'm\n\nKiruvchi SMS-xabar\t\n84,21 so'm\n\nChiquvchi SMS-xabarlar – UMS abonentlariga\t\n84,21 so'm\n\nChiquvchi SMS-xabarlar – O'zbekistonning boshqa mobil operatorlari abonentlarga\t\n631.55 so'm\n\nInternetning 1 MB trafigi\t\n210,52 so'm\n1 MB Internet-trafik (“Yengil Internet” xizmati yoqilmagan bo‘lsa)"))
+        list3.add(listClass("Terminal",       "12 000 so'm/oy",      "*111*112#",           "O'zbekiston bo'yicha qo'ng'iroqlarning bir daqiqasi\t\n126,31 so'm\n\nUMS abonentlariga\t\n210,52 so'm\n\nO'zbekistonning boshqa mobil operatorlari abonentlariga\t\n210,52 so'm\n\nShahar raqamlariga\nO'zbekiston bo'yicha 1 ta SMS-xabar\t\n0 so'm\n\nKiruvchi SMS-xabar\t\n84,21 so'm\n\nChiquvchi SMS-xabarlar – UMS abonentlariga\t\n84,21 so'm\n\nChiquvchi SMS-xabarlar – O'zbekistonning boshqa mobil operatorlari abonentlarga\t\n631.55 so'm\n\nInternetning 1 MB trafigi\t\n421 so'm\n1 MB Internet-trafik uchun (oylik 300 MB limitdan ortganda)"))
+        list3.add(listClass("Ultra",          "105258.75 so'm /oy",  "*111*103#",           "O'zbekiston bo'yicha qo'ng'iroqlarning bir daqiqasi\t\n0 so'm\n\nUMS abonentlariga\t\n84,21 so'm\n\nBoshqa uyali aloqa operatorlarining abonentlariga\t\n84,21 so'm\n\nShahar telefonlariga\nO'zbekiston bo'yicha 1 ta SMS-xabar\t\n0 so'm\n\nkiruvchi SMS-xabarlar\t\n84,21 so'm\n\nUMS tarmog‘idagi abonentlarga chiquvchi SMS-xabarlar\t\n84,21 so'm\n\nBoshqa operatorlarning mobil tarmog‘idagi abonentlarga chiquvchi SMS-xabarlar\t\n631.55 so'm\n\nInternetning 1 MB trafigi\t\n421 so'm\nOyiga 1500 MBdan ko‘p sarflangan 1 MB internet-trafik"))
+        list3.add(listClass("Omad",           "12 000 so‘m/oy",      "*111*043#",           "O'zbekiston bo'yicha qo'ng'iroqlarning bir daqiqasi\t\n12 so‘m\n\nUMS abonentlariga (400 daqiqalik limit yakunlangandan keyin)\t\n12 so‘m\n\nO'zbekistonning boshqa mobil operatorlari abonentlariga (400 daqiqalik limit yakunlangandan keyin)\t\n12 so‘m\n\nShahar raqamlariga (400 daqiqalik limit yakunlangandan keyin)\nO'zbekiston bo'yicha 1 ta SMS-xabar\t\n0,00 so‘m\n\nKiruvchi SMS-xabar\t\n12 so‘m\n\nChiquvchi SMS-xabarlar – UMS abonentlariga (500 SMS limit yakunlangandan keyin)\t\n12 so‘m\n\nChiquvchi SMS-xabarlar – O'zbekistonning boshqa mobil operatorlari abonentlarga (50 SMS limit yakunlangandan keyin)\t\n631,5 so‘m*\nInternetning 1 MB trafigi\t\n12 so‘m\n1 MB Internet-trafik uchun (50 MB yakunlangandan keyin)"))
+
+        list4.add(listClass("Sizga qo'ng'roq qilishdi",                         "84 so'm/kunlik",                                                 "*111*0131#",          "84 so'm/kunlik",                                               ))
+        list4.add(listClass("ANTIAON",                                          "421 so'm/kuniga Xizmatni o'chirish *111*0100#",                  "*111*0101#",          "421 so'm/kuniga Xizmatni o'chirish *111*0100#",                ))
+        list4.add(listClass("SUPER 0",                                          "4210.35 so'm faqat bir marta yechiladi",                         "*166#",               "4210.35 so'm faqat bir marta yechiladi",                       ))
+        list4.add(listClass("Xizmat doirasidan tashqarida",                     "808 raqamidan SMS xabar keladi\nXizmatni o'chirish #21#",        "*21*998970000007#",   "808 raqamidan SMS xabar keladi\nXizmatni o'chirish #21#",      ))
+        list4.add(listClass("Menga qo'ng'iroq qil",                             "Har bir so'rov 42.10 so'm",                                      "*110*+998XXxxxxxxx#", "Har bir so'rov 42.10 so'm",                                    ))
+        list4.add(listClass("Internet Xizmati",                                 "Xizmatni o'chirish *111*0010#\n Xolatini tekshirish *111*001#",  "*111*0011#",          "Xizmatni o'chirish *111*0010#\n Xolatini tekshirish *111*001#",))
+
+        list5.add(listClass("Iyul 2021",       "Corporate 30, Corporate 50,Corporate 80 tarif rejalaridagi to‘plamlarning yangilanishi!",         "13.07.2021",          "Corporate 30, Corporate 50,Corporate 80 tarif rejalaridagi to‘plamlarning yangilanishi!",))
+        list5.add(listClass("May 2021",        "«Kunlik internet-to‘plamlar narxlarining tushurilishi» aksiyasi uzaytirilmoqda!",                 "24.05.2021",          "«Kunlik internet-to‘plamlar narxlarining tushurilishi» aksiyasi uzaytirilmoqda!",        ))
+        list5.add(listClass("May 2021",        "«Tungi DRIVE xizmati narxlarining tushurilishi» aksiyasining uzaytirilishi",                      "24.05.2021",          "«Tungi DRIVE xizmati narxlarining tushurilishi» aksiyasining uzaytirilishi",             ))
+        list5.add(listClass("Aprel 2021",      "«Qulay taklif V.2» aksiyasidagi o‘zgarishlar!",                                                   "01.04.2021",          "«Qulay taklif V.2» aksiyasidagi o‘zgarishlar!",                                          ))
+        list5.add(listClass("Mart 2021",       "Tarif rejalaridagi to‘plamlarning yangilanishi",                                                  "25.03.2021",          "Tarif rejalaridagi to‘plamlarning yangilanishi",                                         ))
+        list5.add(listClass("Fevral 2021",     "Yangi «Inspektor Ovoz» xizmati!",                                                                 "23.02.2021",          "Yangi «Inspektor Ovoz» xizmati!",                                                        ))
+        list5.add(listClass("Fevral 2021",     "«Kunlik internet-to‘plamlar narxlarining tushurilishi» aksiyasi!",                                "23.02.2021",          "«Kunlik internet-to‘plamlar narxlarining tushurilishi» aksiyasi!",                       ))
+        list5.add(listClass("Fevral 2021",     "«Tungi DRIVE xizmati narxlarining tushurilishi» aksiyasi",                                        "23.02.2021",          "«Tungi DRIVE xizmati narxlarining tushurilishi» aksiyasi",                               ))
+
+    }
+}
